@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 01</title>
+</head>
+<script></script>
+<body>
+    <form name="">
+   
+    <table>
+        <tr><td>Num1</td> <td><input type="number" name="num1" id="n1" size="5"></td></tr>
+        <tr><td>Num2</td> <td><input type="number" name="num2" id="n2" size="5"></td></tr>
+        <tr><td>Resultado</td> <td><input type="number" name="total" readonly id="t" size="5"></td></tr>
+        
+        <button onclick="document.getElementById('num1').innerHTML = prompt('Forneça o valor 1')">
+            Digite o valor 1
+            </button>
+
+            <button onclick="document.getElementById('num2').innerHTML = prompt('Forneça o valor 1')">
+                Digite o valor 2
+                </button>
+    </table>    
+    </form>
+    <input type="reset" value="Limpar" onclick="document.getElementById('n1').focus()">
+</body>
+</html>
