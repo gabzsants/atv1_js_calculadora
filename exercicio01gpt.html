@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício 01 - Calculadora</title>
+    <script>
+      function calcular() {
+        let num1 = parseFloat(document.getElementById("n1").value);
+        let num2 = parseFloat(document.getElementById("n2").value);
+        let operacao = document.getElementById("operacao").value;
+        let resultado;
+
+        switch (operacao) {
+          case "+":
+            resultado = num1 + num2;
+            break;
+          case "-":
+            resultado = num1 - num2;
+            break;
+          case "*":
+            resultado = num1 * num2;
+            break;
+          case "/":
+            resultado = num1 / num2;
+            break;
+          default:
+            resultado = "Operação inválida";
+        }
+
+        document.getElementById("total").value = resultado;
+      }
+
+      function limpar() {
+        document.getElementById("n1").value = "";
+        document.getElementById("n2").value = "";
+        document.getElementById("total").value = "";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculadora</h1>
+    <label for="n1">Num1:</label>
+    <input type="number" id="n1" /><br />
+
+    <label for="n2">Num2:</label>
+    <input type="number" id="n2" /><br />
+
+    <label for="total">Resultado:</label>
+    <input type="number" id="total" readonly /><br />
+
+    <label for="operacao">Operação:</label>
+    <select id="operacao">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option></select
+    ><br />
+
+    <button onclick="calcular()">Calcular</button>
+    <button onclick="limpar()">Limpar</button>
+  </body>
+</html>
